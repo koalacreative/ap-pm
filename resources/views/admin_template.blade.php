@@ -72,13 +72,9 @@
 <script src="{{ asset("assets/js/app.min.js")}}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{ asset("assets/js/demo.js")}}"></script>
-<!-- jQuery -->
-<script src="//code.jquery.com/jquery.js"></script>
 <!-- DataTables -->
-<script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-<script src="//cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
-<!-- Bootstrap JavaScript -->
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="{{ asset("assets/js/jquery.dataTables.min.js") }}"></script>
+<script src="{{ asset("assets/js/dataTables.bootstrap.min.js") }}"></script>
 <!-- App scripts -->
 @stack('scripts')
 </body>

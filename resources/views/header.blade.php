@@ -11,15 +11,11 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class=""><a href="#">Home <span class="sr-only">(current)</span></a></li>
+            <li class=""><a href="/">Home <span class="sr-only">(current)</span></a></li>
             <li class="{{ Request::segment(1) === 'test' ? 'active' : null }}">
               <a href="{{ url('test') }}">Wilayah</a>
             </li>
-            <!-- <li>
-              <a href="#">Pengaturan</a>
-              
-            </li> -->
-            <li class="dropdown notifications-menu">
+            <li class="dropdown notifications-menu {{ Request::segment(1) === 'master' ? 'active' : null }}">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 Master Data
               </a>
@@ -29,12 +25,12 @@
                   <!-- inner menu: contains the actual data -->
                   <ul class="menu">
                     <li>
-                      <a href="#">
+                      <a href="{{ url('/master/wilayah') }}">
                         <i class="fa fa-map-marker text-red"></i>Data Wilayah
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="{{ url('/master/user') }}">
                         <i class="fa fa-users text-aqua"></i>Data User
                       </a>
                     </li>

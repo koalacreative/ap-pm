@@ -22,8 +22,7 @@ Route::get('detail', 'TestCon@index');
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
-
-// oute::get('/example', 'DatatablesController@index');
+#example
 Route::get('/datatables/add', 'DatatablesController@getForm');
 Route::post('/datatables/save', 'DatatablesController@store');
 Route::get('/datatables/edit/{id}', 'DatatablesController@edit');
@@ -32,4 +31,14 @@ Route::get('/datatables/delete/{id}', 'DatatablesController@destroy');
 Route::controller('datatables', 'DatatablesController', [
     'anyData'  => 'datatables.data',
     'getIndex' => 'datatables',
+]);
+#master data
+Route::get('/master/wilayah/add', 'MasterController@getForm');
+Route::post('/master/wilayah/save', 'MasterController@store');
+Route::get('/master/wilayah/edit/{id}', 'MasterController@edit');
+Route::post('/master/wilayah/update/{id}', 'MasterController@update');
+Route::get('/master/wilayah/delete/{id}', 'MasterController@destroy');
+Route::controller('master/wilayah', 'MasterController', [
+    'anyData'  => 'wilayah.data',
+    'getIndex' => 'wilayah',
 ]);
